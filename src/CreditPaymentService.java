@@ -5,7 +5,7 @@ public class CreditPaymentService {
 
 
 
-        result = amount * ( x + x / (( Math.pow( 1 + x ), mounth ) - 1 ));
+        result = amount * (x + x / ( Math.pow((1 + x), mounth) - 1));
 
         return(int) result;
     }
