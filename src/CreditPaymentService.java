@@ -1,13 +1,12 @@
 public class CreditPaymentService {
-    public int calculate(double percent , int amount, int mounth) {
+    public int calculate(double percent, int amount, int mounth) {
         double result;
-        double x = percent / 100 / 12;
+        double monthlyPercentage = percent / 100 / 12;
 
 
+        result = amount * (monthlyPercentage + monthlyPercentage / (Math.pow((1 + monthlyPercentage), mounth) - 1));
 
-         result = amount * (x + x / ( Math.pow((1 + x), mounth) - 1));
 
-
-        return(int) result;
+        return (int) result;
     }
 }
